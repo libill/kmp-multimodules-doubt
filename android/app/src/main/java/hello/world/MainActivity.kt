@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.widget.TextView
 import hello.world.modulea.HelloWorld
+import hello.world.modulea.platform.PlatformA
 import hello.world.moduleb.egassem
 
 class MainActivity : Activity() {
@@ -14,7 +15,7 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val helloWorld = HelloWorld("Greetings from Android!")
-        val text = "${helloWorld.message}\n${helloWorld.egassem()}"
+        val text = "${helloWorld.message}\n${helloWorld.egassem()}\n${PlatformA().getA()}"
         hello.text = text
     }
 
